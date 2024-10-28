@@ -1,8 +1,8 @@
-# Your Name Here
+# Ian Bullard
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# Submission Date 10/28/24
+# Lab 07
+# Lab Section: 14
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -19,7 +19,20 @@
 
 factorial = 1
 
-print(f"The result of the factorial based on the given bound is {factorial}")
+upper_bound = int(input("Please input an upper bound for the factorial\n"))
+while (True):
+    if upper_bound > 0:
+        for num in range(1, upper_bound + 1):
+            factorial *= num
+        print(f"The result of the factorial based on the given bound is {factorial}")
+        break
+    else:
+        print(f'Your Upper Bound is not valid please re-run')
+        break
+
+
+
+#print(f"The result of the factorial based on the given bound is {factorial}")
 
 print("*"*75)
 # Create a while loop that prompts a user for input of an integer values
@@ -38,6 +51,14 @@ print("*"*75)
 # The sum should start at 0 
 
 num_sum = 0 
+
+while (True):
+    num = input("Input a number to add or type q to quit\n")
+    if num == "q":
+        break
+    else:
+        num = int(num)
+        num_sum += num
 
 print(f"Your final sum is {num_sum}")
 
@@ -59,4 +80,16 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
-        
+while (True):
+    calc_statement = input("Input a mathematical statement with two numbers and an operator or input exit to exit.\nex: 2+2 or 5 * 4\n")
+    calc_statement = calc_statement.lower()
+    if calc_statement == "exit":
+        break
+    else:
+        operators = ["+", "-", "*", "/", "%"]
+        for operator in operators:
+            if(operator in operators):
+                print(operator)
+                
+numbers = 1
+print(numbers)
