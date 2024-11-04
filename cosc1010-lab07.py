@@ -88,8 +88,19 @@ while (True):
     else:
         operators = ["+", "-", "*", "/", "%"]
         for operator in operators:
-            if(operator in operators):
-                print(operator)
-                
-numbers = 1
-print(numbers)
+            if(operator in calc_statement):
+                numbers = calc_statement.split(operator)
+                numbers[0] = int(numbers[0])
+                numbers[1] = int(numbers[1])
+                match operator:
+                    case"+":
+                        final_output = numbers[0] + numbers[1];
+                    case"-":
+                        final_output = numbers[0] - numbers[1];
+                    case"*":
+                        final_output = numbers[0] * numbers[1];
+                    case"/":
+                        final_output = numbers[0] / numbers[1];
+                    case"%":
+                        final_output = numbers[0] % numbers[1];
+                print(final_output)
